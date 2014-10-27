@@ -38,7 +38,7 @@ void Queues::showQueue()
     }
     std::cout << "NULL" << std::endl;
 }
-void Queues::swapFirstWIthLast()
+void Queues::swapFirstWithLast()
 {
     if(head->next!=nullptr)
     {

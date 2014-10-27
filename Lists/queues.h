@@ -12,5 +12,5 @@ public:
     ~Queues();
     void addToQueue(int x);
     void showQueue();
-    void swapFirstWIthLast();
+    void swapFirstWithLast();
 };

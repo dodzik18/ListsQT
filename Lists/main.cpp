@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
     }
 
     queue1.showQueue();
-    queue1.swapFirstWIthLast();
+    queue1.swapFirstWithLast();
     queue1.showQueue();
 
 
