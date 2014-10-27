@@ -24,6 +24,16 @@ int main(int argc, char *argv[])
 
     queue1.showQueue();
 
+    Lists list1(getRandom());
+    for(int i=0;i<9;i++)
+    {
+        list1.addToList(getRandom());
+    }
+    list1.deleteNthElement(8);
+    list1.showList();
+    list1.swapFirstWithLast();
+    list1.showList();
+
     //--------dynamic object allocation-------------
     /*unique_ptr<Lists> uptr1 = make_unique<Lists>();
     for (int i = 0; i < 5; i++)
