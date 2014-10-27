@@ -31,3 +31,10 @@ Makefile*
 #QtCtreator Qml
 *.qmlproject.user
 *.qmlproject.user.*
+*.exe
+*.manifest
+*.rc
+*.res
+*.ilk
+*.obj
+*.pdb
