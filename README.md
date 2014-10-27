@@ -9,9 +9,9 @@ also:
 
 - [ ] Write function, that adds two queues
 
-- [x] Write function, that swaps first and last element(queue)
+- [x] Write function, that swaps first and last element(queue) (**Queues::swapFirstWithLast()**)
 
-- [x] Write function, that swaps first and last element(list) (**swapFirstWithLast()**)
+- [x] Write function, that swaps first and last element(list) (**Lists::swapFirstWithLast()**)
 
 - [ ] Write function, that swaps given element with its successor
 
