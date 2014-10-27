@@ -9,7 +9,7 @@ also:
 
 - [ ] Write function, that adds two queues
 
-- [ ] Write function, that swaps first and last element(queue)
+- [x] Write function, that swaps first and last element(queue)
 
 - [x] Write function, that swaps first and last element(list) (**swapFirstWithLast()**)
 
