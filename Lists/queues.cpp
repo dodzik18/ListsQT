@@ -38,3 +38,13 @@ void Queues::showQueue()
     }
     std::cout << "NULL" << std::endl;
 }
+void Queues::swapFirstWIthLast()
+{
+    if(head->next!=nullptr)
+    {
+        Node *ptr=new Node;
+        ptr->val=tail->val;
+        tail->val=head->val;
+        head->val=ptr->val;
+    }
+}
