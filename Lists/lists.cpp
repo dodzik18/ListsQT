@@ -175,5 +175,19 @@ void Lists::swapGivenXWithSuccessor(int value)
 void Lists::deleteNElementsAfterX(int value, int element)
 {
     Node *ptr=head;
-    while(ptr->val!=)
+    Node *temp=new Node;
+    int delCounter=element; //number of elements to delete
+    int i=0;
+    while(ptr->val!=value)
+    {
+        ptr=ptr->next;
+    }
+    while((ptr!=nullptr)&&(i<delCounter))
+    {
+         temp=ptr->next;
+         ptr->next=temp->next;
+         delete temp;
+         count--;i++;
+    }
+
 }

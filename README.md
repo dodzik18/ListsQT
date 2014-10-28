@@ -1,4 +1,4 @@
-#####Lists and queues
+#Lists and queues
 
 
 - [x] -61- of http://x3.cdn03.imgwykop.pl/c3201142/comment_IXOc2ZETIfJWYVm54XKSiGd9tQ5vCtbr.jpg
@@ -17,7 +17,7 @@ also:
 
 - [ ] Write function, that deletes every second element 
 
-- [ ] Write function, that deletes n of elements, after given x
+- [x] Write function, that deletes n of elements, after given x (**deleteNElementsAfterX()**)
 
 - [ ] Write function, that bubblesorts list
 
@@ -51,5 +51,7 @@ head | -> | 2 | -> | 2 | -> | 4 | -> | 4 | ->| 4 | -> | 4 | -> | NULL
 
 - [x] Queues destructor
 
+- [ ] getHeadAndTailVal()
 
-#Written using QT Creator
+
+######Written using QT Creator
