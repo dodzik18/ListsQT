@@ -13,4 +13,7 @@ public:
     void addToQueue(int x);
     void showQueue();
     void swapFirstWithLast();
+    void mergeQueues(Queues &queue1, Queues  &queue2);
+    void delFirstQueueElement(); //removes first element from queue
+    void delLastQueueElement(); //removes last element from queue
 };

@@ -7,13 +7,13 @@ also:
 
 - [x] Write function, that adds two lists (**mergeLists()**)
 
-- [ ] Write function, that adds two queues
+- [x] Write function, that adds two queues (**mergeQueues()**)
 
 - [x] Write function, that swaps first and last element(queue) (**Queues::swapFirstWithLast()**)
 
 - [x] Write function, that swaps first and last element(list) (**Lists::swapFirstWithLast()**)
 
-- [ ] Write function, that swaps given element with its successor
+- [x] Write function, that swaps given element with its successor (**swapGivenXWithSuccessor()**)
 
 - [ ] Write function, that deletes every second element 
 

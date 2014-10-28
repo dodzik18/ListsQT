@@ -1,10 +1,9 @@
 #include <QCoreApplication>
-#include <iostream>
-#include <random>
-#include <memory>
 #include "lists.h"
 #include "queues.h"
 #include "node.h"
+#include <random>
+#include <iostream>
 
 using namespace std;
 
@@ -23,7 +22,8 @@ int main(int argc, char *argv[])
     }
 
     queue1.showQueue();
-    queue1.swapFirstWithLast();
+
+
     queue1.showQueue();
 
 

@@ -159,3 +159,21 @@ void Lists::addAfterGivenX(int value, int element)
         count++;
     }
 }
+void Lists::swapGivenXWithSuccessor(int value)
+{
+    Node *ptr=head;
+    while(ptr->val!=value)
+    {
+        ptr=ptr->next;
+    }
+    Node *temp=new Node;
+    temp->val=ptr->val;
+    ptr->val=ptr->next->val;
+    ptr->next->val=temp->val;
+    delete temp;
+}
+void Lists::deleteNElementsAfterX(int value, int element)
+{
+    Node *ptr=head;
+    while(ptr->val!=)
+}

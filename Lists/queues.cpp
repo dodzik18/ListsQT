@@ -48,3 +48,32 @@ void Queues::swapFirstWithLast()
         head->val=ptr->val;
     }
 }
+void Queues::delFirstQueueElement()
+{
+        Node *ptr=head;
+        while(ptr!=nullptr)
+        {
+            head=head->next;
+            delete ptr;
+            ptr=head;
+        }
+}
+void Queues::delLastQueueElement()
+{
+    Node *ptr=head;
+    while(ptr->next!=tail)
+    {
+        ptr=ptr->next;
+    }
+    delete tail;
+    tail=ptr;
+}
+
+void Queues::mergeQueues(Queues &queue1, Queues &queue2)
+{
+   while(queue2.head!=nullptr)
+   {
+       queue1.addToQueue(queue2.head->val);
+       queue2.deleteFirstQueueElement();
+   }
+}

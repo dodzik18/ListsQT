@@ -22,4 +22,6 @@ public:
     void copyEqualToValue();
     void addBeforeGivenX(int value, int element); //we are inserting -value- just before -element-
     void addAfterGivenX(int value, int element); //same as above, but it adds -value- after -element-
+    void swapGivenXWithSuccessor(int value);
+    void deleteNElementsAfterX(int value, int element);
 };
