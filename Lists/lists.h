@@ -5,7 +5,7 @@ class Lists
 {
     Node *head = nullptr;
     size_t count = 0;
-    unsigned getListSize() const { return count; }
+    size_t getListSize() const { return count; }
     void getHeadValue() const{ std::cout << head->val << std::endl; }  //debug tool
 
 public:

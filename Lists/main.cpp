@@ -1,9 +1,10 @@
+#include <random>
+#include <iostream>
 #include <QCoreApplication>
 #include "lists.h"
 #include "queues.h"
 #include "node.h"
-#include <random>
-#include <iostream>
+
 
 using namespace std;
 
@@ -15,16 +16,24 @@ int main(int argc, char *argv[])
     uniform_int_distribution<int> distribution(1, 100);
     auto getRandom = [&]() { return distribution(generator); };
 
+
     Queues queue1(1);
-    for (int i = 0; i < 9; i++)
+    for (int i = 2; i < 11; i++)
     {
-        queue1.addToQueue(getRandom());
+        queue1.addToQueue(i);
+    }
+    Queues queue2(1);
+    for(int i=2; i<11;i++)
+    {
+        queue2.addToQueue(i);
     }
 
     queue1.showQueue();
+    queue2.showQueue();
 
-
+    queue1.mergeQueues(queue1, queue2);
     queue1.showQueue();
+
 
 
     //--------dynamic object allocation-------------
