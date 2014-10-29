@@ -53,5 +53,7 @@ head | -> | 2 | -> | 2 | -> | 4 | -> | 4 | ->| 4 | -> | 4 | -> | NULL
 
 - [ ] getHeadAndTailVal()
 
+- [ ] adding to the end of list
+
 
 ######Written using QT Creator
