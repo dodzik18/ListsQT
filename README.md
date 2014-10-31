@@ -7,7 +7,7 @@ also:
 
 - [x] Write function, that adds two lists (**mergeLists()**)
 
-- [x] Write function, that adds two queues (**mergeQueues()**) //need fixes
+- [x] Write function, that adds two queues (**mergeQueues()**) 
 
 - [x] Write function, that swaps first and last element(queue) (**Queues::swapFirstWithLast()**)
 
