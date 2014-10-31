@@ -22,21 +22,14 @@ int main(int argc, char *argv[])
     {
         queue1.addToQueue(i);
     }
-    Queues queue2(1);
-    for(int i=2; i<11;i++)
-    {
-        queue2.addToQueue(i);
-    }
 
-    queue1.showQueue();
-    queue2.showQueue();
 
-    queue1.mergeQueues(queue1, queue2);
     queue1.showQueue();
 
 
 
-    //--------dynamic object allocation-------------
+
+    //--------dynamic memory allocation-------------
     /*unique_ptr<Lists> uptr1 = make_unique<Lists>();
     for (int i = 0; i < 5; i++)
     {

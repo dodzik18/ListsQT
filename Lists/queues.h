@@ -16,6 +16,6 @@ public:
     void swapFirstWithLast();
     void delFirstQueueElement(); //removes first element from queue
     void delLastQueueElement(); //removes last element from queue
-    void mergeQueues(Queues queue1, Queues  &queue2);
+    void mergeQueues(Queues &queue1, Queues  &queue2);
 
 };

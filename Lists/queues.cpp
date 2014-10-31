@@ -73,25 +73,20 @@ void Queues::delFirstQueueElement()
 
 }
 
-void Queues::mergeQueues(Queues queue1, Queues  &queue2) //test
+void Queues::mergeQueues(Queues &queue1, Queues &queue2)
 {
-   Node *ptr=new Node;
-   ptr->val=queue2.head->val;
 
-   int i=1;
-
-   while((queue2.head!=nullptr)&&(queue2.count>1))
-   {
-       queue1.addToQueue(ptr->val);
-       queue2.delFirstQueueElement();
-       ptr->val=queue2.head->val;
-   }
-   queue1.addToQueue(queue2.tail->val);
-
-
-       std::cout<<"i:"<<i<<"c1:"<<queue1.count<<"c2:"<<queue2.count<<" ";i++; //debug tool
+    while(queue2.head!=queue2.tail)
+    {
+        queue1.addToQueue(queue2.head->val);
+        queue2.delFirstQueueElement();
+    }
+    queue1.addToQueue(queue2.tail->val);
+    queue2.delFirstQueueElement();
 
 }
+
+
 
 void Queues::delLastQueueElement()  //broken
 {
