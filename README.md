@@ -19,9 +19,9 @@ also:
 
 - [x] Write function, that deletes n of elements, after given x (**deleteNElementsAfterX()**)
 
-- [ ] Write function, that bubblesorts list
+- [ ] Write function, that sorts list
 
-- [ ] Write function, that inverts the list
+- [x] Write function, that inverts the list
  
 - [x] Write functon, that inserts element after given x (**addAfterGivenX()**)
 
