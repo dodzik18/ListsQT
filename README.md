@@ -14,10 +14,15 @@
 
 - [x] Write function, that deletes n of elements, after given x (**deleteNElementsAfterX()**)
 
-- [ ] Write function, that bubblesorts list
+- [ ] Write function, that sorts list
 
+<<<<<<< HEAD
 - [ ] Write function, that inverts the list
 
+=======
+- [x] Write function, that inverts the list
+ 
+>>>>>>> 8be54afb57d827f121d9bef8ae72b9c454e422c6
 - [x] Write functon, that inserts element after given x (**addAfterGivenX()**)
 
 - [x] Write functon, that inserts element before given x (**addBeforeGivenX()**)
