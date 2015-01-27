@@ -38,3 +38,8 @@ Makefile*
 *.ilk
 *.obj
 *.pdb
+
+# Visual Studio Files
+*.tlog
+*.idb
+*.lastbuildstate
