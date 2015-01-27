@@ -80,6 +80,7 @@
   <ItemGroup>
     <ClCompile Include="..\lists.cpp" />
     <ClCompile Include="..\main.cpp" />
+    <ClCompile Include="..\node.cpp" />
     <ClCompile Include="..\queues.cpp" />
   </ItemGroup>
   <ItemGroup>

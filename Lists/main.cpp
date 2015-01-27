@@ -1,6 +1,5 @@
 #include <random>
 #include <iostream>
-#include <QCoreApplication>
 #include "lists.h"
 #include "queues.h"
 #include "node.h"
@@ -8,24 +7,26 @@
 
 using namespace std;
 
-int main(int argc, char *argv[])
+int main()
 {
-    QCoreApplication a(argc, argv);
-
+	/* random number generator in accordance with the standard*/
     default_random_engine generator;
     uniform_int_distribution<int> distribution(1, 100);
     auto getRandom = [&]() { return distribution(generator); };
 
 
-    Queues queue1(1);
-    for (int i = 2; i < 11; i++)
+    Lists list, list2;
+    for (int i = 0; i < 10; i++)
     {
-        queue1.addToQueue(i);
+        list.addToList(i);
+		list2.addToList(getRandom());
     }
 
+    list.showList();
 
-    queue1.showQueue();
-
+	list.swapGivenXWithSuccessor(4);
+	
+	list.showList();
 
 
 
@@ -42,6 +43,6 @@ int main(int argc, char *argv[])
     uptr1->showList();*/
     //----------------------------------------------
 
-    return a.exec();
+	return 0;
 }
 

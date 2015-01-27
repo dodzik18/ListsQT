@@ -1,11 +1,22 @@
-#include <iostream>
 #include "lists.h"
+#include "node.h"
+#include <iostream>
+
+Lists::Lists()
+{ 
+	/*simply setting first's element value to zero*/
+	Node* head = new Node;
+	head->val = 0;
+}
 
 Lists::Lists(int x)
 {
     addToList(x);
 }
 
+/*
+each function that is doing something with list have to initialize its own pointer, that can store values, and pointers while moving/deleting/adding other cells
+*/
 Lists::~Lists()
 {
     Node *ptr = head;
@@ -15,16 +26,15 @@ Lists::~Lists()
         delete ptr;
         ptr = head;
     }
-    //std::cout << "Succes" << std::endl; //check if destructor works
 }
 
 void Lists::addToList(int x)
-{
-    Node *ptr = new Node; //memalloc for *ptr
+{ 
+    Node *ptr = new Node;
     ptr->val = x;
     ptr->next = head;
     head = ptr;
-    count++;
+    listSize++;
 }
 
 void Lists::showList() const
@@ -36,21 +46,9 @@ void Lists::showList() const
         ptr = ptr->next;
     }
     std::cout << "NULL" << std::endl;
-    std::cout << "List has " << getListSize() << " elements." << std::endl;
-    //getHeadValue();
+    std::cout << "List has " << getSizeT() << " elements." << std::endl;
 }
 
-void Lists::howDoesRandomFunctionWork()
-{
-    Node *ptr = head;
-    while (ptr != nullptr)
-    {
-        if (ptr->val == 100) std::cout << ptr->val << "->";
-
-        ptr = ptr->next;
-    }
-    std::cout << "NULL" << std::endl;
-}
 void Lists::deleteFromList()
 {
     Node *ptr = head;
@@ -58,7 +56,7 @@ void Lists::deleteFromList()
     {
         head = head->next;
         delete ptr;
-        count--;
+        listSize--;
     }
 }
 
@@ -76,13 +74,13 @@ void Lists::deleteNthElement(int n)
         Node *temp = ptr->next;
         ptr->next = temp->next;
         delete temp;
-        count--;
+        listSize--;
     }
 }
 void Lists::mergeLists(Lists &list1, Lists &list2)
 {
     Node *ptr = list2.head;
-    int temp = list2.count;  //got to use /for(;i<temp;)/ instead of /for(;list2.count;)/, dont know why....
+    int temp = list2.listSize;  //got to use /for(;i<temp;)/ instead of /for(;list2.listSize;)/, dont know why....
     for (int i = 0; i < temp; i++)
     {
         list1.addToList(ptr->val);
@@ -122,7 +120,7 @@ void Lists::addBeforeGivenX(int value, int element)
         temp->val = value;
         temp->next = ptr->next;
         ptr->next = temp;
-        count++;
+        listSize++;
     }
 }
 
@@ -152,11 +150,12 @@ void Lists::addAfterGivenX(int value, int element)
         {
             ptr = ptr->next;
         }
+		/* im inserting cell in between */
         Node *temp = new Node;
         temp->val = value;
         temp->next = ptr->next;
         ptr->next = temp;
-        count++;
+        listSize++;
     }
 }
 void Lists::swapGivenXWithSuccessor(int value)
@@ -166,18 +165,15 @@ void Lists::swapGivenXWithSuccessor(int value)
     {
         ptr=ptr->next;
     }
-    Node *temp=new Node;
-    temp->val=ptr->val;
-    ptr->val=ptr->next->val;
-    ptr->next->val=temp->val;
-    delete temp;
+	swap(*ptr, *ptr->next);
+
 }
 void Lists::deleteNElementsAfterX(int value, int element)
 {
     Node *ptr=head;
     Node *temp=new Node;
-    int delCounter=element; //number of elements to delete
-    int i=0;
+	auto delCounter=element; //number of elements to delete
+	auto i=0;
     while(ptr->val!=value)
     {
         ptr=ptr->next;
@@ -187,7 +183,7 @@ void Lists::deleteNElementsAfterX(int value, int element)
          temp=ptr->next;
          ptr->next=temp->next;
          delete temp;
-         count--;i++;
+         listSize--;i++;
     }
 
 }

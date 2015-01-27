@@ -1,6 +1,11 @@
 #include <iostream>
 #include "queues.h"
 
+void Queues::getHeadAndTailVal() const
+{
+	std::cout << "Head value:" << head->val << "\nTail value:" << tail->val << std::endl;
+}
+
 Queues::Queues(int x)
 {
     head = new Node;
