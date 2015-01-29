@@ -43,3 +43,5 @@ Makefile*
 *.tlog
 *.idb
 *.lastbuildstate
+*.opensdf
+*.sdf

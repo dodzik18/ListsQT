@@ -24,7 +24,7 @@ int main()
 
     list.showList();
 
-	list.swapGivenXWithSuccessor(4);
+	list.invertList();
 	
 	list.showList();
 
