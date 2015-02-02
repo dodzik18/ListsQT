@@ -16,7 +16,7 @@
 
 - [ ] Write function, that sorts list
 
-- [x] Write function, that inverts the list
+- [x] Write function, that inverts the list (**invertList()**)
 
 - [x] Write functon, that inserts element after given x (**addAfterGivenX()**)
 

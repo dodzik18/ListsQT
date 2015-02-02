@@ -15,18 +15,15 @@ int main()
     auto getRandom = [&]() { return distribution(generator); };
 
 
-    Lists list, list2;
+    Lists list, list2, list3, list4;
     for (int i = 0; i < 10; i++)
     {
         list.addToList(i);
 		list2.addToList(getRandom());
     }
 
-    list.showList();
-
-	list.invertList();
 	
-	list.showList();
+
 
 
 
